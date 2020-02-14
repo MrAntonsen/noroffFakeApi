@@ -1,104 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Posts</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="stylepost.css" />
-  </head>
-  <body>
-    <h1 class="text-center mb-5">Post</h1>
-    <div class="container post-container"></div>
-    <div class="container text-center mt-5">
-      <div class="row">
-        <div class="col">
-          <button class="btn-success btn-lg" onclick="getUserInfo()">
-            Fetch User Info
-          </button>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade hide"
-      id="exampleModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title text-center" id="exampleModalLabel">
-              User information
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Go To User
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade hide"
-      id="exampleModal1"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg text-center" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            Loading userdata
-            <span aria-hidden="true">&times;</span>
-          </div>
-          <div class="modal-body text-center">
-            <div class="spinner-border" role="status">
-              <span class="sr-only">Fetching userdata</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <script src="scriptPost.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Posts</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./css/stylepost.css" />
+	</head>
+	<body>
+		<div class="container-fluid main-container">
+			<h1 class="text-center mb-5">Post</h1>
+			<div class="container post-container"></div>
+			<div class="container text-center mt-5">
+				<div class="row">
+					<div class="col">
+						<button class="btn-outline-primary btn-lg" onclick="getUserInfo()">
+							Fetch User Info
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade hide"
+			id="exampleModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title text-center" id="exampleModalLabel">
+							User information
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">
+							Go To User
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade hide"
+			id="exampleModal1"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLabel1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg text-center" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<strong>Loading userdata</strong>
+						<span aria-hidden="true">&times;</span>
+					</div>
+					<div class="modal-body text-center">
+						<div class="spinner-border" role="status">
+							<span class="sr-only">Fetching userdata</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
+			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+		<script src="scriptPost.js"></script>
+	</body>
 </html>

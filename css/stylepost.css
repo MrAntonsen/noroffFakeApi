@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+.main-container {
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(to bottom, rgb(0, 0, 0) 20%, rgb(13, 0, 87));
+	color: white;
+}
+.card {
+	font-family: 'Teko', sans-serif;
+	background: rgb(88, 88, 88);
+}
+.card:hover {
+	background: darkgray;
+	color: yellow;
+}
+h3 {
+	font-size: 3rem;
+}
+.modal {
+	background-color: rgba(151, 146, 146, 0.438);
+}
+.modal-content {
+	border: 5px solid black;
+	background-color: darkgray;
+}
+.modal-body {
+	color: green;
+}
+.modal-content h1 {
+	color: white;
+}
+
+.spinner-border {
+	color: whitesmoke;
+	background: linear-gradient(to bottom, rgb(0, 0, 0) 20%, rgb(13, 0, 87));
+}
+.gradient-border {
+	--borderWidth: 5px;
+	position: relative;
+	border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+	content: '';
+	position: absolute;
+	top: calc(-1 * var(--borderWidth));
+	left: calc(-1 * var(--borderWidth));
+	height: calc(100% + var(--borderWidth) * 2);
+	width: calc(100% + var(--borderWidth) * 2);
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border-radius: calc(2 * var(--borderWidth));
+	z-index: -1;
+	animation: animatedgradient 3s ease alternate infinite;
+	background-size: 300% 300%;
+}
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+span {
+	color: black;
+	font-weight: 600;
+	font-size: 0.8rem;
+	margin-right: 0.5rem;
+}
